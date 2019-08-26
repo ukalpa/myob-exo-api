@@ -1,8 +1,6 @@
-#MYOB 
+#myob-exo-api
 
-MYOB Library 
-
-## Why use MYOB Library?
+myob-exo-api is a javascript library of accessing MYOB EXO API, you can easily use it to interact with MYOB EXO. It is developed and maintained by BIZEX LIMITED a New Zealand company specialised in MYOB EXO, MYOB Advanced, Accredo, XERO and other financial software in NZ and AU markets. For more information related with the api usage and and commercial support consultant service, welcome to contact with admin@bizex.co.nz
 
 
 ## Installation
@@ -42,6 +40,13 @@ const myob = new MYOB({
     console.log(items);
 })();
 
+// Search debtors
+(async() => {
+    const items = await myob.Debtor.search('abc');
+    console.log(items);
+})();
+
+
 // Get the specific debtor and edit it
 (async() => {
     const item = await myob.Debtor.find(1);
@@ -50,9 +55,7 @@ const myob = new MYOB({
     console.log(item);
     
 })();
-
 ```
-
 
 **Stock Item**
 
@@ -68,6 +71,13 @@ const myob = new MYOB({
     });
     console.log(items);
 })();
+
+// Search stock items
+(async() => {
+    const items = await myob.StockItem.search('abc');
+    console.log(items);
+})();
+
 
 // Get the specific stock item
 (async() => {
@@ -106,3 +116,12 @@ const myob = new MYOB({
 })();
 
 ```
+
+**Branches**
+
+As same as above
+
+
+**Staff**
+
+As same as above
