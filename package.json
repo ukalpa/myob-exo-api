@@ -1,6 +1,6 @@
 {
   "name": "myob-exo-api",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "MYOB EXO API",
   "main": "dist/myob.js",
   "engines": {
